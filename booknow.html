@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book Your Tickets</title>
+    <link rel="stylesheet" href="booknow.css">
+</head>
+
+<body>
+    <h1>🎟 Book Your Tickets</h1>
+    <p>This is your booking page. Select seats, timing, and proceed to pay.</p>
+
+    <div class="screen">SCREEN</div>
+
+    <div class="seats-container">
+        <!-- Row A -->
+        <div class="row">
+            <span class="row-label">A</span>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat "></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <!-- Row B -->
+        <div class="row">
+            <span class="row-label">B</span>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat "></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <!-- Row C -->
+        <div class="row">
+            <span class="row-label">C</span>
+            <div class="seat"></div>
+            <div class="seat "></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <span class="row-label">D</span>
+            <div class="seat"></div>
+            <div class="seat "></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat selected"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <span class="row-label">E</span>
+            <div class="seat"></div>
+            <div class="seat selected"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+    </div>
+
+    <div class="legend">
+        <div><span class="seat"></span> Available</div>
+        <div><span class="seat selected"></span> Selected</div>
+        <div><span class="seat occupied"></span> Occupied</div>
+    </div>
+
+    <button class="confirm-btn">Confirm Booking</button>
+
+    <script>
+        const seats = document.querySelectorAll('.seat:not(.occupied)');
+        seats.forEach(seat => {
+            seat.addEventListener('click', () => {
+                seat.classList.toggle('selected');
+            });
+        });
+    </script>
+</body>
+
+</html>

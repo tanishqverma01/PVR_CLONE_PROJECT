@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PVR Movie Booking</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./booknow.html">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="./logo-v2.webp" alt="PVR Logo" class="logo" />
+      <a class="active" href="#">🏠 Home</a>
+      <a href="https://www.pvrcinemas.com/show-timings">🎟 Showtimings</a>
+      <a href="https://www.pvrcinemas.com/cinemas/Jodhpur">🎬 Cinemas</a>
+      <a href="https://www.pvrcinemas.com/offers">🏷 Offers</a>
+      <a href="https://www.pvrcinemas.com/investors-section">🧾 Investor Section</a>
+      <a href="https://passport.pvrinox.com/">⭐ Passport</a>
+      <a href="#">☰ More</a>
+    </div>
+    <div class="nav-right">
+      <input type="text" id="movieSearch" placeholder="🔍 Search Movies..." onkeyup="filterMovies()" />
+      <select name="" id="" disabled="disabled"></select>
+      <select>
+        <option selected>Jodhpur</option>
+        <option>Jaipur</option>
+        <option>Delhi</option>
+        <option>Mumbai</option>
+        <option>Bengaluru</option>
+        <option>Chennai</option>
+        <option>Kolkata</option>
+        <option>Pune</option>
+        <option>Hyderabad</option>
+        <option>Ahmedabad</option>
+        <option>Lucknow</option>
+        <option>Chandigarh</option>
+        <option>Indore</option>
+        <option>Coimbatore</option>
+        <option>Surat</option>
+        <option>Vadodara</option>
+        <option>Visakhapatnam</option>
+        <option>Patna</option>
+        <option>Agra</option>
+        <option>Kanpur</option>
+        <option>Guwahati</option>
+        <option>Thiruvananthapuram</option>
+        <option>Madurai</option>
+        <option>Coimbatore</option>
+        <option>Rajkot</option>
+        <option>Amritsar</option>
+        <option>Vijayawada</option>
+        <option>Gwalior</option>
+        <option>Raipur</option>
+        <option>Jabalpur</option>
+        <option>Agartala</option>
+        <option>Shillong</option>
+        <option>Imphal</option>
+        <option>Dimapur</option>
+        <option>Aizawl</option>
+        <option>Itanagar</option>
+        <option>Gangtok</option>
+        <option>Port Blair</option>
+        <option>Dehradun</option>
+        <option>Ranchi</option>
+        <option>Udaipur</option>
+        <option>Gurgaon</option>
+        <option>Noida</option>
+        <option>Faridabad</option>
+        <option>Ghaziabad</option>
+        <option>Meerut</option>
+        <option>Agra</option>
+        <option>Allahabad</option>
+        <option>Varanasi</option>
+        <option>Patiala</option>
+        <option>Bathinda</option>
+        <option>Amroha</option>
+        <option>Moradabad</option>
+        <option>Aligarh</option>
+        <option>Firozabad</option>
+        <option>Muzaffarnagar</option>
+        <option>Meerut</option>
+        <option>Hapur</option>
+        <option>Bulandshahr</option>
+        <option>Rampur</option>
+        <option>Shahjahanpur</option>
+        <option>Azamgarh</option>
+        <option>Bahraich</option>
+        <option>Gonda</option>
+        <option>Barabanki</option>
+        <option>Farrukhabad</option>
+        <option>Hardoi</option>
+        <option>Kannauj</option>
+        <option>Unnao</option>
+      </select>
+      <a href="./login.html"><button class="login-btn">Login</button></a>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>F1 THE MOVIE</h1>
+      <p class="meta">UA 16+ • 2h 35m • Friday, Jun 27, 2025 • Sports, Action, Drama • Hindi, English</p>
+      <p class="desc">
+        Racing legend Sonny Hayes is coaxed out of retirement to lead a struggling Formula 1 team—and mentor a young
+        hotshot driver—while chasing one more chance at glory.
+      </p>
+      <a href="booknow.html" target="_blank" class="book-btn">Book</a>
+    </div>
+  </section>
+
+  <!-- Quick Book -->
+  <div class="quick-book">
+    <strong>Quick Book</strong>
+    <button class="selected">Movie</button>
+    <button class="selected">Cinema</button>
+    <label for="cinema-dropdown" class="quick-label"></label>
+    <select id="cinema-dropdown" class="dropdown">
+      <option value="Sitaare Zameen Par">Select Movie</option>
+      <option value="f1">F1 THE MOVIE</option>
+      <option value="Megan 2.0">Megan 2.0</option>
+      <option value="Naruto">Naruto</option>
+      <option value="Maa">Maa</option>
+      <option value="The Nun 2">The Nun 2</option>
+      <option value="The Marvels">The Marvels</option>
+      <option value="The Nun">The Nun</option>
+      <option value="The Hunger Games">The Hunger Games</option>
+      <option value="The Exorcist">The Exorcist</option>
+      <option value="The Conjuring">The Conjuring</option>
+      <option value="The Flash">The Flash</option>
+      <option value="The Batman">The Batman</option>
+      <option value="Avatar">Avatar</option>
+      <option value="Avengers">Avengers</option>
+      <option value="The Nun">The Nun</option>
+      <option value="The Marvels">The Marvels</option>
+      <option value="The Conjuring 2">The Conjuring 2</option>
+      <option value="Dead Silence">Dead Silence</option>
+      <option value="Annabelle">Annabelle</option>
+      <option value="Insidious">Insidious</option>
+      <option value="Annabelle Comes">Annabelle Comes</option>
+      <option value="Insidious The"></option>
+    </select>
+
+
+    <input type="text" placeholder="Select Movie" />
+    <span id="custom-date"></span>
+    <script>
+      function updateDate() {
+        const d = new Date();
+        document.getElementById('custom-date').textContent =
+          d.toLocaleString('en-GB'); // DD/MM/YYYY, HH:MM:SS
+      }
+      updateDate(); // Initial call
+      setInterval(updateDate, 1000); // Update every second
+    </script>
+    <input type="text" placeholder="Select Date" />
+    <select>
+      <option>All Cinemas</option>
+      <option>IMAX</option>
+      <option>3D</option>
+    </select>
+    <select>
+      <option>All Genres</option>
+      <option>Action</option>
+      <option>Drama</option>
+      <option>Comedy</option>
+      <option>Horror</option>
+    </select>
+    <input type="text" placeholder="Select Cinema" />
+    <input type="text" placeholder="Select Timing" />
+    <button class="book-btn">Book</button>
+  </div>
+
+  <!-- Navigation Tabs -->
+  <div class="tabs">
+    <a class="active-tab" href="#">Now Showing</a>
+    <a href="#">Coming Soon</a>
+    <a href="#">Experiences</a>
+    <a href="#">Trailers</a>
+    <a href="#">Offers</a>
+  </div>
+
+  <!-- Now Showing -->
+  <section class="now-showing">
+    <h2>Now Showing</h2>
+    <div class="filters">
+      <label><input type="checkbox" /> With Subtitle</label>
+      <select>
+        <option>All Genres</option>
+        <option>Action</option>
+        <option>Drama</option>
+        <option>Comedy</option>
+        <option>Horror</option>
+        <option>Romance</option>
+        <option>Thriller</option>
+        <option>Science Fiction</option>
+        <option>Fantasy</option>
+        <option>Documentary</option>
+        <option>Animation</option>
+        <option>Adventure</option>
+      </select>
+      <select>
+        <option>All Languages</option>
+        <option>Hindi</option>
+        <option>English</option>
+      </select>
+    </div>
+    <div class="movie-list">
+      <a href="https://youtu.be/YH6k5weqwy8?si=QhUJymZNEpXDGVLu">
+        <div class="movie"><img src="./Sitaare Zameen Par.jpeg" alt="Sitaare Zameen Par" /><span>Sitaare Zameen
+            Par</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/69ffwl-8pCU?si=LFpt0fc6Dq_9SSf6">
+        <div class="movie"><img src="./F1 The Movie.jpeg" alt="F1 The Movie" /><span>F1 The Movie</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5> <a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/IYLHdEzsk1s?si=DRlusnwoPQ18PSI1">
+        <div class="movie"><img src="./Megan 2.0.jpg" alt="Megan 2.0" /><span>Megan 2.0</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/-G9BqkgZXRA?si=j9uVpvyt6z0HzhPg">
+        <div class="movie"><img src="./Naruto.jpeg" alt="Naruto" /><span>Naruto</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5> <a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/lVvMbXiJjko?si=7gxzjWiDITy-uGJZ">
+        <div class="movie"><img src="./ma.jpeg" alt="Maa" /><span>Maa</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/QF-oyCwaArU?si=jiB2_wPn3T7fjvrY">
+        <div class="movie"><img src="./The Nun 2.jpeg" alt="The Nun 2" /><span>The Nun 2</span>
+          <h5>UA 18+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/wS_qbDztgVY?si=0WtwYIGGqXPecQ2P">
+        <div class="movie"><img src="./The Marvels.jpeg" alt="The Marvels" /><span>The Marvels</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5> <a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/pzD9zGcUNrw?si=JVH2qz5zIfbczbqb">
+        <div class="movie"><img src="./The Nun.jpeg" alt="The Nun" /><span>The Nun</span>
+          <h5>UA 18+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/eO0T9A3kdqc?si=Kdt9Qgg-9vkrJv_K">
+        <div class="movie"><img src="./The Hunger Games.jpeg" alt="The Hunger Games" /><span>The Hunger Games</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/BU2eYAO31Cc?si=lmo5Oo8u26UTZoB5">
+        <div class="movie"><img src="./The Exorcist.jpeg" alt="The Exorcist" /><span>The Exorcist</span>
+          <h5>UA 18+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/ejMMn0t58Lc?si=8PhL7r1awr1_PcjL">
+        <div class="movie"><img src="./The Conjuring.jpeg" alt="The Conjuring" /><span>The Conjuring</span>
+          <h5>UA 18+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/hebWYacbdvc?si=8gCc5CegCShTIoeR">
+        <div class="movie"><img src="./The Flash.jpeg" alt="The Flash" /><span>The Flash</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/mqqft2x_Aa4?si=KMe2ZHRyTcsSj3ga">
+        <div class="movie"><img src="./The Batman.jpeg" alt="The Batman" /><span>The Batman</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5> <a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/5PSNL1qE6VY?si=f3mJQahi4H803aze">
+        <div class="movie"><img src="./Avatar.jpeg" alt="Avatar" /><span>Avatar</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/eOrNdBpGMv8?si=-eecd12VA8N4_JMg">
+        <div class="movie"><img src="./Avengers.jpeg" alt="Avengers" /><span>Avengers</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/VFsmuRPClr4?si=ScCGTn-ZIN-BEbfF">
+        <div class="movie"><img src="./The Conjuring 2.jpeg" alt="The Conjuring 2" /><span>The Conjuring 2</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/8b_HVtHmK30?si=lCBb0AuJYIjA0iq1">
+        <div class="movie"><img src="./Dead Silence.jpeg" alt="Dead Silence" /><span>Dead Silence</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/paFgQNPGlsg?si=tISVmzWSupcVkGB6">
+        <div class="movie"><img src="./Annabelle.jpeg" alt="Annabelle" /><span>Annabelle</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5> <a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/ZuQuOnYnr3Q?si=V6pIr42KuXRVh2Kb">
+        <div class="movie"><img src="./Insidious.jpeg" alt="Insidious" /><span>Insidious</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/LGP_DjLjRg8?si=NvXaQ4PHReQSa0RS">
+        <div class="movie"><img src="./Annabelle Comes Home.jpeg" alt="Annabelle Comes Home" /><span>Annabelle Comes
+            Home</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5> <a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/acQyrwQyCOk?si=5QdtphFfVEad7cO5">
+        <div class="movie"><img src="./Insidious  The Last Key.jpeg" alt="Insidious The Last Key" /><span>Insidious The
+            Last Key </span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/tvM-guXIFLM?si=DltXhIBHeGCvVpIJ">
+        <div class="movie"><img src="./ASH.jpeg" alt="ASH" /><span>ASH</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/gYbnjaK5nsI?si=Gy4TmMhA3B7dTX-j">
+        <div class="movie"><img src="./Fear Street Prom Queen.jpeg" alt="Fear Street:Prom Queen" /><span>Fear
+            Street:Prom Queen </span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/d4VVkwTw3x4?si=3Uwl3GxqFV5mT-8X">
+        <div class="movie"><img src="./chhorii 2.jpeg" alt="Chhorii 2" /><span>Chhorii 2</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/dj3CXY8rKuY?si=dNm8bHFA6zZwmKwu">
+        <div class="movie"><img src="./Fear Street 1966.jpeg" alt="Fear Street: 1966" /><span>Fear Street:1966</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/0HY6QFlBzUY?si=bAL0ptLo56DrMT_W">
+        <div class="movie"><img src="./Smile 2.jpeg" alt="Smile 2" /><span>Smile 2</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <a href="https://youtu.be/YjTZMEbpKsc?si=PLB0pZlzdJBNBMX0">
+        <div class="movie"><img src="./Don't Move.jpeg" alt="Don't Move" /><span>Don't Move</span>
+          <h5>UA 13+ Hindi gnrs +1 more</h5><a href="booknow.html" target="_blank" class="book-btn">Book</a>
+        </div>
+      </a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="fnb-buttons">
+        <a href="./error.html"><button class="fnb">🍴 ORDER F&B</button></a>
+        <a href="./error.html"><button class="curated">🎬 Curated Shows</button></a>
+      </div>
+  </section>
+  <hr>
+  <hr>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h2>About PVR</h2>
+        <p>
+        <h4>Learn more about PVR, our history, and our commitment to providing the best movie experience.</h4>
+        </p>
+      </div>
+      <div class="footer-section">
+        <h2>Contact Us</h2>
+        <p>
+        <h4>Have questions or feedback? Reach out to us through our contact page.</h4>
+        </p>
+      </div>
+      <div class="footer-section">
+        <h2>Follow Us</h2>
+        <p>
+        <h4>Stay updated with the latest news and offers by following us on social media.</h4>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+      <h4>&copy; 2025 PVR Cinemas. All rights reserved.</h4>
+      </p>
+      <p>
+      <h4>Privacy Policy | Terms of Service</h4>
+      </p>
+    </div>
+  </footer>
+  <hr>
+  <hr>
+</body>
+
+</html>
